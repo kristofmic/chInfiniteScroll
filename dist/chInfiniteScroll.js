@@ -42,6 +42,7 @@
       registerScrollListener();
       scope.$on(SCROLL_EVENT.REGISTER, registerScrollListener);
       scope.$on(SCROLL_EVENT.REMOVE, removeScrollListener);
+      elem.$on('$destroy', removeScrollListener);
 
       function registerScrollListener() {
         removeScrollListener();
